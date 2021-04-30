@@ -1,0 +1,73 @@
+.notes-component {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	padding: 50px 0 50px;
+	flex-flow: row wrap;
+	justify-content: center;
+	border-radius: 0 0 20px 0;
+	// background-color: rgba(255, 255, 255, 0.2);
+
+	@media screen and (max-width: 768px) {
+		border-radius: 0 0 20px 20px;
+	}
+
+	.notecard-component {
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		width: 300px;
+		height: 230px;
+		margin: 20px 20px;
+
+		&:hover {
+			transform: scale(1.05);
+			// box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+		}
+
+		.note-title {
+			position: relative;
+			padding: 20px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			width: 100%;
+
+			// background-color: #fff;
+			// background-color: rgba(29, 40, 65, 0.85);
+			border-radius: 10px 10px 0 0;
+			border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+			p {
+				font-weight: 500;
+			}
+
+			.delete-icon {
+				position: absolute;
+				right: 20px;
+				opacity: 0.7;
+				cursor: pointer;
+
+				&:hover {
+					color: #2196f3;
+				}
+
+				&:active {
+					color: #86ff61;
+				}
+			}
+		}
+
+		.note-content {
+			padding: 20px;
+			width: 100%;
+			height: 100%;
+			border-radius: 0 0 10px 10px;
+			// background-color: rgba(225, 225, 225, 0.5);
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+			border-right: 1px solid rgba(0, 0, 0, 0.05);
+		}
+	}
+}

@@ -1,0 +1,541 @@
+.sidebar-component {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-radius: 20px 0 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar-component {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+.sidebar-component .title {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar-component .title {
+    padding: 0 15px 0;
+  }
+}
+
+.sidebar-component .title p {
+  opacity: 0.9;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.sidebar-component .link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar-component .link .myNotes {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  width: 100%;
+  height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar-component .link .myNotes {
+    padding: 0 15px 0;
+  }
+}
+
+.sidebar-component .link .myNotes:hover {
+  background-color: rgba(44, 125, 255, 0.2);
+}
+
+.sidebar-component .link .myNotes p {
+  font-size: 1.1rem;
+  margin-left: 20px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 550px) {
+  .sidebar-component .link .myNotes p {
+    display: none;
+  }
+}
+
+.sidebar-component .link .myNotes .sidebar-button {
+  color: inherit;
+  opacity: 0.65;
+}
+
+.sidebar-component .link .createNote {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  width: 100%;
+  height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar-component .link .createNote {
+    padding: 0 15px 0;
+  }
+}
+
+.sidebar-component .link .createNote:hover {
+  background-color: rgba(44, 125, 255, 0.2);
+}
+
+.sidebar-component .link .createNote p {
+  font-size: 1.1rem;
+  margin-left: 20px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 550px) {
+  .sidebar-component .link .createNote p {
+    display: none;
+  }
+}
+
+.sidebar-component .link .createNote .sidebar-button {
+  color: inherit;
+  opacity: 0.65;
+}
+
+.mainContent-component {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent-component .topbar {
+  width: 100%;
+  height: 7vh;
+}
+
+.mainContent-component .notes {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 78vh;
+  border-radius: 0 0 20px 0;
+}
+
+.topbar-component {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 0 20px 0 0;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .topbar-component {
+    border-radius: 0;
+  }
+}
+
+.topbar-component .topbar-action {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.topbar-component .topbar-action .action-icon {
+  color: inherit;
+  opacity: 0.8;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.topbar-component .topbar-action .action-icon:hover {
+  filter: drop-shadow(0px 0px 7px rgba(255, 254, 254, 0.5));
+  transform: scale(1.2);
+}
+
+.topbar-component .login-component .submit-btn {
+  width: 120px;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #1fa2ff 0%, #12d8fa 51%, #1fa2ff 100%);
+  background-size: 200% auto;
+  transition: 0.25s;
+  color: #ffff;
+}
+
+.topbar-component .login-component .submit-btn:hover {
+  background-position: right center;
+  box-shadow: 0px 0px 5px rgba(225, 225, 225, 0.5);
+}
+
+.topbar-component .avatar {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.topbar-component .avatar p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  padding-right: 20px;
+}
+
+.topbar-component .avatar .expand-icon {
+  cursor: pointer;
+}
+
+.topbar-component .avatar .expand-icon:hover {
+  color: white;
+  filter: drop-shadow(0px 0px 7px rgba(255, 254, 254, 0.5));
+}
+
+.topbar-component .avatar .avatar-pic {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.topbar-component .avatar .logout-component {
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  z-index: 5;
+}
+
+.topbar-component .avatar .logout-component .submit-btn {
+  width: 120px;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #1fa2ff 0%, #12d8fa 51%, #1fa2ff 100%);
+  background-size: 200% auto;
+  transition: 0.25s;
+  color: #ffff;
+}
+
+.topbar-component .avatar .logout-component .submit-btn:hover {
+  background-position: right center;
+  box-shadow: 0px 0px 5px rgba(225, 225, 225, 0.5);
+}
+
+.createNote-component {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+
+.createNote-component p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+.createNote-component .form-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.createNote-component .form-container .form-title {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.createNote-component .form-container .form-title input {
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  background-color: #eee;
+  transition: 0.2s;
+}
+
+.createNote-component .form-container .form-title input ::placeholder {
+  color: #888;
+}
+
+.createNote-component .form-container .form-title input:focus {
+  background-color: #cecece;
+  box-shadow: 0px 0px 10px #fff;
+}
+
+.createNote-component .form-container .form-detail {
+  width: 100%;
+}
+
+.createNote-component .form-container .form-detail textarea {
+  resize: none;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  background-color: #eee;
+  transition: 0.2s;
+}
+
+.createNote-component .form-container .form-detail textarea ::placeholder {
+  color: #888;
+}
+
+.createNote-component .form-container .form-detail textarea:focus {
+  background-color: #cecece;
+  box-shadow: 0px 0px 10px #fff;
+}
+
+.createNote-component .form-container .submit-btn {
+  margin-top: 10px;
+  width: 120px;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #1fa2ff 0%, #12d8fa 51%, #1fa2ff 100%);
+  background-size: 200% auto;
+  transition: 0.25s;
+  color: #ffff;
+}
+
+.createNote-component .form-container .submit-btn:hover {
+  background-position: right center;
+  box-shadow: 0px 0px 5px rgba(225, 225, 225, 0.5);
+}
+
+.notes-component {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  padding: 50px 0 50px;
+  flex-flow: row wrap;
+  justify-content: center;
+  border-radius: 0 0 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .notes-component {
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+.notes-component .notecard-component {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 230px;
+  margin: 20px 20px;
+}
+
+.notes-component .notecard-component:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+}
+
+.notes-component .notecard-component .note-title {
+  position: relative;
+  padding: 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.notes-component .notecard-component .note-title p {
+  font-weight: 500;
+}
+
+.notes-component .notecard-component .note-title .delete-icon {
+  position: absolute;
+  right: 20px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.notes-component .notecard-component .note-title .delete-icon:hover {
+  color: #2196f3;
+}
+
+.notes-component .notecard-component .note-title .delete-icon:active {
+  color: #86ff61;
+}
+
+.notes-component .notecard-component .note-content {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 10px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  bottom: 60px;
+}
+
+.pagination .page {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.pagination .page:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.pagination .page:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.modal-component {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 20px 0;
+  z-index: 1;
+  padding: 70px 100px 140px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-component {
+    padding: 70px 25px 140px;
+  }
+}
+
+.modal-component .close-icon {
+  position: absolute;
+  right: 50px;
+  color: #ffff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-component .close-icon {
+    top: 20px;
+  }
+}
+
+.modal-component .modal {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-component .modal .modal-title {
+  padding: 20px 30px;
+  min-height: 60px;
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-component .modal .modal-title p {
+  font-weight: 500;
+}
+
+.modal-component .modal .modal-content {
+  padding: 20px 30px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+}
+
+.modal-component .modal .modal-content p {
+  line-height: 1.5rem;
+  word-spacing: 0.5rem;
+  opacity: 0.75;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  max-height: 100%;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.App {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.App .App-content {
+  display: flex;
+  width: 85vw;
+  height: 85vh;
+  backdrop-filter: blur(20px);
+}
+
+@media screen and (max-width: 768px) {
+  .App .App-content {
+    flex-direction: column;
+  }
+}
+
+.App .App-content .sidebar {
+  height: 85vh;
+  width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .App .App-content .sidebar {
+    height: 10vh;
+    width: 100%;
+  }
+}
+
+.App .App-content .main-content {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .App .App-content .main-content {
+    height: 75vh;
+  }
+}
+/*# sourceMappingURL=main.css.map */

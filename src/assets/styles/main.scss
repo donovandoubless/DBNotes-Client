@@ -1,0 +1,63 @@
+@import "../styles/partials/sidebar";
+@import "../styles/partials/maincontent";
+@import "../styles/partials/topbar";
+@import "../styles/partials/createnote";
+@import "../styles/partials/notes";
+@import "../styles/partials/pagination";
+@import "../styles/partials/modal";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	place-content: center;
+	font-family: "Poppins", sans-serif;
+	height: 100vh;
+	max-height: 100%;
+	width: 100vw;
+	max-width: 100%;
+	overflow: hidden;
+
+	// background: radial-gradient(ellipse at bottom, #00f2fe 0%, #4facfe 100%);
+}
+
+.App {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	.App-content {
+		display: flex;
+		width: 85vw;
+		height: 85vh;
+		backdrop-filter: blur(20px);
+
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+		}
+
+		.sidebar {
+			height: 85vh;
+			width: 300px;
+
+			@media screen and (max-width: 768px) {
+				height: 10vh;
+				width: 100%;
+			}
+			// border-right: 0.5px solid rgba(92, 92, 92, 0.1);
+		}
+
+		.main-content {
+			height: 100%;
+			width: 100%;
+
+			@media screen and (max-width: 768px) {
+				height: 75vh;
+			}
+		}
+	}
+}
