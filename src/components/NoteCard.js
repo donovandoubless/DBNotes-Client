@@ -15,7 +15,7 @@ function NoteCard(props) {
 
 		if (user !== "") {
 			await axios
-				.post("http://localhost:5000/deletenote", deleteContent)
+				.post("https://mydb-notes.herokuapp.com/deletenote", deleteContent)
 				.then((res) => {
 					props.onDelete(deleteContent.noteId);
 				});

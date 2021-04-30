@@ -38,7 +38,7 @@ function CreateNote(props) {
 
 		if (user !== "") {
 			await axios
-				.post("http://localhost:5000/createnote", newNote)
+				.post("https://mydb-notes.herokuapp.com/createnote", newNote)
 				.then((res) => {
 					props.setContent(newNote);
 					history.push("/");
