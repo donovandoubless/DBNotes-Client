@@ -4,7 +4,7 @@ import axios from "axios";
 
 function Logout() {
 	const handleSignOut = () => {
-		axios.get("https://mydb-notes.herokuapp.com/auth/logout").then((res) => {
+		axios.get("/auth/logout").then((res) => {
 			window.location.href = "/";
 		});
 	};

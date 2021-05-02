@@ -7,9 +7,13 @@ const UserContextProvider = (props) => {
 	const [user, setUser] = useState("");
 
 	useEffect(() => {
+		console.log("Hello");
 		axios
-			.get("https://mydb-notes.herokuapp.com/user", { withCredentials: true })
+			.get("/auth/user", {
+				withCredentials: true,
+			})
 			.then((res) => {
+				console.log(res);
 				if (res.data) {
 					setUser(res.data);
 				}

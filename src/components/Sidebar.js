@@ -35,5 +35,3 @@ function Sidebar() {
 }
 
 export default Sidebar;
-
-// style={{ textDecoration: "none", color: "black" }}
