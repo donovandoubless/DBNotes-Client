@@ -4,9 +4,13 @@ import axios from "axios";
 
 function Logout() {
 	const handleSignOut = () => {
-		axios.get("https://mydb-notes.herokuapp.com/auth/logout").then((res) => {
-			window.location.href = "/";
-		});
+		axios
+			.get("https://mydb-notes.herokuapp.com/auth/logout", {
+				withCredentials: true,
+			})
+			.then((res) => {
+				window.location.href = "/";
+			});
 	};
 
 	return (
