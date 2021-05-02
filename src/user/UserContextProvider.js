@@ -9,7 +9,7 @@ const UserContextProvider = (props) => {
 	useEffect(() => {
 		console.log("Hello");
 		axios
-			.get("/auth/user", {
+			.get("https://mydb-notes.herokuapp.com/auth/user", {
 				withCredentials: true,
 			})
 			.then((res) => {
