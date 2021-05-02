@@ -5,7 +5,7 @@ import axios from "axios";
 function Logout() {
 	const handleSignOut = () => {
 		axios
-			.get("https://mydb-notes.herokuapp.com/auth/logout", {
+			.get(`${process.env.REACT_APP_LOGOUT}`, {
 				withCredentials: true,
 			})
 			.then((res) => {

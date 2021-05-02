@@ -8,7 +8,7 @@ function Login() {
 				className="submit-btn"
 				variant="contained"
 				onClick={() => {
-					window.open("https://mydb-notes.herokuapp.com/auth/google/", "_self");
+					window.open(`${process.env.REACT_APP_LOGIN}`, "_self");
 				}}
 			>
 				Sign In
