@@ -51,14 +51,14 @@ function MainContent(props) {
 		}
 
 		if (width > 768 && width < 905) {
-			setContentsPerPage(4);
+			setContentsPerPage(2);
 		}
 
 		if (width >= 905 && width <= 1263) {
 			setContentsPerPage(4);
 		}
 
-		if (width >= 1487 && width < 1613) {
+		if (width > 1263 && width < 1613) {
 			setContentsPerPage(6);
 		}
 
@@ -76,7 +76,6 @@ function MainContent(props) {
 		checkPageSize();
 		return () => {
 			window.removeEventListener("resize", updateWindowDimensions);
-			console.log("cleanup");
 		};
 	});
 
