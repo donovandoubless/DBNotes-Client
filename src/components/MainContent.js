@@ -41,17 +41,7 @@ function MainContent(props) {
 		setCurrentPage(number);
 	};
 
-	useEffect(() => {
-		const updateWindowDimensions = () => {
-			setWidth(window.innerWidth);
-		};
-
-		window.addEventListener("resize", updateWindowDimensions);
-
-		return () => window.removeEventListener("resize", updateWindowDimensions);
-	}, []);
-
-	useEffect(() => {
+	const checkPageSize = () => {
 		if (width > 620 && width < 1067) {
 			setContentsPerPage(2);
 		}
@@ -67,7 +57,20 @@ function MainContent(props) {
 		if (width > 1900) {
 			setContentsPerPage(8);
 		}
-	}, [width]);
+	};
+
+	useEffect(() => {
+		const updateWindowDimensions = () => {
+			setWidth(window.innerWidth);
+		};
+
+		window.addEventListener("resize", updateWindowDimensions);
+		checkPageSize();
+		return () => {
+			window.removeEventListener("resize", updateWindowDimensions);
+			console.log("cleanup");
+		};
+	});
 
 	return (
 		<div className="mainContent-component">
