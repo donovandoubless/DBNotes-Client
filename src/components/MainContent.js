@@ -42,19 +42,27 @@ function MainContent(props) {
 	};
 
 	const checkPageSize = () => {
-		if (width > 620 && width < 1067) {
+		if (width < 638) {
 			setContentsPerPage(2);
 		}
 
-		if (width >= 1067 && width < 1487) {
+		if (width > 638 && width <= 768) {
 			setContentsPerPage(4);
 		}
 
-		if (width >= 1487 && width < 1900) {
+		if (width > 768 && width < 905) {
+			setContentsPerPage(4);
+		}
+
+		if (width >= 905 && width <= 1263) {
+			setContentsPerPage(4);
+		}
+
+		if (width >= 1487 && width < 1613) {
 			setContentsPerPage(6);
 		}
 
-		if (width > 1900) {
+		if (width >= 1613) {
 			setContentsPerPage(8);
 		}
 	};
