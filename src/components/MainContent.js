@@ -11,6 +11,7 @@ function MainContent(props) {
 	const [currentPage, setCurrentPage] = useState(1);
 	const [contentsPerPage, setContentsPerPage] = useState(8);
 	const [width, setWidth] = useState(window.innerWidth);
+	const [height, setHeight] = useState(window.innerHeight);
 
 	const { user } = useContext(UserContext);
 
@@ -42,34 +43,45 @@ function MainContent(props) {
 	};
 
 	const checkPageSize = () => {
-		if (width < 638) {
-			setContentsPerPage(2);
+		if (width > 1612) {
+			setContentsPerPage(8);
+		} else if (width > 1263) {
+			setContentsPerPage(6);
+		} else if (width > 903) {
+			if (height > 1000) {
+				setContentsPerPage(6);
+			} else if (height < 550) {
+				setContentsPerPage(2);
+			} else {
+				setContentsPerPage(4);
+			}
+		} else if (width > 768) {
+			if (height < 500) {
+				setContentsPerPage(1);
+			} else {
+				setContentsPerPage(2);
+			}
 		}
 
 		if (width > 638 && width <= 768) {
-			setContentsPerPage(4);
-		}
-
-		if (width > 768 && width < 905) {
-			setContentsPerPage(2);
-		}
-
-		if (width >= 905 && width <= 1263) {
-			setContentsPerPage(4);
-		}
-
-		if (width > 1263 && width < 1613) {
-			setContentsPerPage(6);
-		}
-
-		if (width >= 1613) {
-			setContentsPerPage(8);
+			if (height <= 500) {
+				setContentsPerPage(2);
+			} else {
+				setContentsPerPage(4);
+			}
+		} else if (width < 638) {
+			if (height < 330) {
+				setContentsPerPage(1);
+			} else {
+				setContentsPerPage(2);
+			}
 		}
 	};
 
 	useEffect(() => {
 		const updateWindowDimensions = () => {
 			setWidth(window.innerWidth);
+			setHeight(window.innerHeight);
 		};
 
 		window.addEventListener("resize", updateWindowDimensions);
