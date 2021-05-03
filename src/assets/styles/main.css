@@ -123,7 +123,7 @@
 
 .mainContent-component .topbar {
   width: 100%;
-  height: 7vh;
+  height: 7.5vh;
 }
 
 .mainContent-component .notes {
@@ -131,7 +131,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 78vh;
+  height: 92.5vh;
   border-radius: 0 0 20px 0;
 }
 
@@ -335,6 +335,7 @@
 @media screen and (max-width: 768px) {
   .notes-component {
     border-radius: 0 0 20px 20px;
+    padding: 0px 0 50px;
   }
 }
 
@@ -345,6 +346,18 @@
   width: 300px;
   height: 230px;
   margin: 20px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .notes-component .notecard-component {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-height: 660px) {
+  .notes-component .notecard-component {
+    height: 180px;
+  }
 }
 
 .notes-component .notecard-component:hover {
@@ -361,6 +374,13 @@
   width: 100%;
   border-radius: 10px 10px 0 0;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-height: 660px) {
+  .notes-component .notecard-component .note-title {
+    padding: 0px 20px;
+    font-size: 0.9rem;
+  }
 }
 
 .notes-component .notecard-component .note-title p {
@@ -389,6 +409,13 @@
   border-radius: 0 0 10px 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-height: 660px) {
+  .notes-component .notecard-component .note-content {
+    padding: 5px 20px;
+    font-size: 0.9rem;
+  }
 }
 
 .pagination {
@@ -490,23 +517,19 @@ body {
   display: grid;
   place-content: center;
   font-family: "Poppins", sans-serif;
-  height: 100vh;
-  max-height: 100%;
-  width: 100vw;
-  max-width: 100%;
   overflow: hidden;
 }
 
 .App {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .App .App-content {
   display: flex;
-  width: 85vw;
-  height: 85vh;
+  width: 100%;
+  height: 100%;
   backdrop-filter: blur(20px);
 }
 
@@ -517,7 +540,7 @@ body {
 }
 
 .App .App-content .sidebar {
-  height: 85vh;
+  height: 100%;
   width: 300px;
 }
 
@@ -535,7 +558,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .App .App-content .main-content {
-    height: 75vh;
+    height: 90vh;
   }
 }
 /*# sourceMappingURL=main.css.map */
